@@ -119,7 +119,8 @@ namespace entreprise_using_tdd.tests
         {
             //arrange 
             var mockDepartment = new Department() { Id = new Guid("815accac-fd5b-478a-a9d6-f171a2f6ae7f"), Code="Facturation",
-                    Title = "Begining to learn is the fun part about being learned"};
+                    Title = "Facturation"
+            };
 
             //act
             var result = _entrepriseController.Add(mockDepartment) as CreatedAtActionResult;
@@ -150,8 +151,8 @@ namespace entreprise_using_tdd.tests
             var mockDepartment = new Department()
             {
                 Id = new Guid("815accac-fd5b-478a-a9d6-f171a2f6ae7f"),
-                Code = "Facturation",
-                Title = "Begining to learn is the fun part about being learned"
+                Code = "Affaire",
+                Title = "Facturation"
             };
             _mockDepartmentsList.Object.Add(mockDepartment);
 
@@ -255,7 +256,7 @@ namespace entreprise_using_tdd.tests
             {
                 Id = new Guid("815accac-fd5b-478a-a9d6-f171a2f6ae7f"),
                 Title = "Facturation",
-                Code = "Learn well"
+                Code = "Affaire"
             };
             _mockDepartmentsList.Object.Add(mockDepartment);
 
