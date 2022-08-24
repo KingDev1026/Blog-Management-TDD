@@ -27,8 +27,8 @@ namespace entreprise_using_tdd.tests
         {
             //arrange
             var mockDepartments = new List<Department> {
-                new Department{Title = "Tdd Facturation"},
-                new Department{Title = "Tdd and Bdd"}
+                new Department{Title = "Facturation"},
+                new Department{Title = "Facturation and new Facturation"}
             };
 
             _mockDepartmentsList.Object.AddRange(mockDepartments);
@@ -71,7 +71,7 @@ namespace entreprise_using_tdd.tests
         {
             //arrange 
             var singleMockDepartment = new Department() { Id = new Guid("815accac-fd5b-478a-a9d6-f171a2f6ae7f") ,
-                Title ="Learn TDD", Code ="Facturation"};
+                Title ="facturation", Code ="Facturation"};
 
             _mockDepartmentsList.Object.Add(singleMockDepartment);
 
@@ -103,7 +103,8 @@ namespace entreprise_using_tdd.tests
         {
             //arrange
             var mockDepartment = new Department() { Code="Facturation",
-                Title ="Begining to learn s the fun part about being learned" };
+                Title = "NEW MESSAGES"
+            };
 
             //act 
             mockDepartment.Id = Guid.NewGuid();
