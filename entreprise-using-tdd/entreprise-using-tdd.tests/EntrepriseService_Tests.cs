@@ -27,7 +27,7 @@ namespace entreprise_using_tdd.tests
         {
             //arrange
             var mockDepartments = new List<Department> {
-                new Department{Title = "Tdd One"},
+                new Department{Title = "Tdd Facturation"},
                 new Department{Title = "Tdd and Bdd"}
             };
 
