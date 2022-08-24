@@ -168,9 +168,9 @@ namespace entreprise_using_tdd.tests
         {
             var mockDepartment = new List<Department>()
             {
-                new Department(){Id = new Guid("815accac-fd5b-478a-a9d6-f171a2f6ae7f"), Title = "Learning One" },
-                new Department(){Id = Guid.NewGuid(), Title = "Learning Two" },
-                new Department(){Id = Guid.NewGuid(), Title = "Learning Three"}
+                new Department(){Id = new Guid("815accac-fd5b-478a-a9d6-f171a2f6ae7f"), Title = "Facturation One" },
+                new Department(){Id = Guid.NewGuid(), Title = "Facturation Two" },
+                new Department(){Id = Guid.NewGuid(), Title = "Facturation Three"}
             };
             _mockDepartmentsList.Object.AddRange(mockDepartment);
 
@@ -208,7 +208,7 @@ namespace entreprise_using_tdd.tests
         public void UpdateTest_ReturnsNull_WhenIdIsNullAndDepartmentIsNotNull()
         {
             //arrange 
-            var mockDepartment = new Department() { Id = Guid.NewGuid(), Title = "lesson two" };
+            var mockDepartment = new Department() { Id = Guid.NewGuid(), Title = "Facturation two" };
 
             //act
             var result = _entrepriseController.Update(null, mockDepartment);
@@ -221,7 +221,7 @@ namespace entreprise_using_tdd.tests
         public void UpdateTest_ReturnNotFoundResult_WhenIdNotExisting()
         {
             //arrange 
-            var mockDepartment = new Department() { Id = Guid.NewGuid(), Title = "Lesson Three" };
+            var mockDepartment = new Department() { Id = Guid.NewGuid(), Title = "Facturation Three" };
 
             //act
             var result = _entrepriseController.Update(mockDepartment.Id, mockDepartment);
@@ -235,7 +235,8 @@ namespace entreprise_using_tdd.tests
         {
             //arrange 
             var mockDepartment = new Department() { Id = new Guid("815accac-fd5b-478a-a9d6-f171a2f6ae7f"),
-                Title = "Facturation", Code = "Learn well" };
+                Title = "Facturation", Code = "Affaire"
+            };
 
             _mockDepartmentsList.Object.Add(mockDepartment);
 
