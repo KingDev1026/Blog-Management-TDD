@@ -71,7 +71,7 @@ namespace entreprise_using_tdd.tests
         {
             //arrange 
             var singleMockDepartment = new Department() { Id = new Guid("815accac-fd5b-478a-a9d6-f171a2f6ae7f") ,
-                Title ="Learn TDD", Code ="Learning is fun"};
+                Title ="Learn TDD", Code ="Facturation"};
 
             _mockDepartmentsList.Object.Add(singleMockDepartment);
 
@@ -87,7 +87,7 @@ namespace entreprise_using_tdd.tests
         public void AddTest_ReturnsBadRequest_WhenModelStateIsInvalid()
         {
             //arrange 
-            var titleMissing = new Department() { Id = new Guid("815accac-fd5b-478a-a9d6-f171a2f6ae7f"), Code = "Learning is fun" };
+            var titleMissing = new Department() { Id = new Guid("815accac-fd5b-478a-a9d6-f171a2f6ae7f"), Code = "Facturation" };
 
             _entrepriseController.ModelState.AddModelError("Title", "Title field is required");
 
@@ -102,7 +102,7 @@ namespace entreprise_using_tdd.tests
         public void AddTest_ReturnsCreatedResponse_WhenValidObjectPassed()
         {
             //arrange
-            var mockDepartment = new Department() { Code="Learning is fun",
+            var mockDepartment = new Department() { Code="Facturation",
                 Title ="Begining to learn s the fun part about being learned" };
 
             //act 
@@ -117,7 +117,7 @@ namespace entreprise_using_tdd.tests
         public void AddTest_ReturnsResponseHasCreatedItem_WhenValidObjectPassed()
         {
             //arrange 
-            var mockDepartment = new Department() { Id = new Guid("815accac-fd5b-478a-a9d6-f171a2f6ae7f"), Code="learning is fun",
+            var mockDepartment = new Department() { Id = new Guid("815accac-fd5b-478a-a9d6-f171a2f6ae7f"), Code="Facturation",
                     Title = "Begining to learn is the fun part about being learned"};
 
             //act
@@ -126,7 +126,7 @@ namespace entreprise_using_tdd.tests
 
             //assert 
             Assert.IsType<Department>(item);
-            Assert.Equal("learning is fun", item.Code);
+            Assert.Equal("Facturation", item.Code);
         }
 
         [Fact]
@@ -149,7 +149,7 @@ namespace entreprise_using_tdd.tests
             var mockDepartment = new Department()
             {
                 Id = new Guid("815accac-fd5b-478a-a9d6-f171a2f6ae7f"),
-                Code = "learning is fun",
+                Code = "Facturation",
                 Title = "Begining to learn is the fun part about being learned"
             };
             _mockDepartmentsList.Object.Add(mockDepartment);
@@ -234,7 +234,7 @@ namespace entreprise_using_tdd.tests
         {
             //arrange 
             var mockDepartment = new Department() { Id = new Guid("815accac-fd5b-478a-a9d6-f171a2f6ae7f"),
-                Title = "Learning is fun", Code = "Learn well" };
+                Title = "Facturation", Code = "Learn well" };
 
             _mockDepartmentsList.Object.Add(mockDepartment);
 
@@ -252,15 +252,15 @@ namespace entreprise_using_tdd.tests
             var mockDepartment = new Department()
             {
                 Id = new Guid("815accac-fd5b-478a-a9d6-f171a2f6ae7f"),
-                Title = "Learning is fun",
+                Title = "Facturation",
                 Code = "Learn well"
             };
             _mockDepartmentsList.Object.Add(mockDepartment);
 
             var mockDepartmentToUpdate = new Department()
             {
-                Title = "Learning is fun",
-                Code = "Learn well again"
+                Title = "Facturation",
+                Code = "Affaire"
             };
 
             //act
